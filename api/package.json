@@ -1,0 +1,41 @@
+{
+  "name": "@project/api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app-router-type.ts",
+  "types": "src/app-router-type.ts",
+  "scripts": {
+    "env": "gen-env-types .env -o src/types/env.d.ts -e .",
+    "build": "tsc",
+    "mig": "drizzle-kit generate",
+    "start": "nodemon src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.7",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv-safe": "^8.1.6",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/passport": "^1.0.16",
+    "drizzle-kit": "^0.22.7",
+    "gen-env-types": "^1.3.4",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "@trpc/server": "11.0.0-rc.421",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv-safe": "^9.1.0",
+    "drizzle-orm": "^0.31.4",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "passport": "^0.7.0",
+    "passport-discord-auth": "^1.1.1",
+    "postgres": "^3.4.4",
+    "zod": "^3.23.8"
+  }
+}
