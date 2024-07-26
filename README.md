@@ -1,10 +1,10 @@
-### How to roll your own auth
+# How to roll your own auth
 
 This repo is a companion to this YouTube video: https://youtu.be/CcrgG5MjGOk
 
 1. Discord OAUTH with passport.js
 
-```
+```ts
 passport.use(
     new Strategy(
       {
@@ -42,7 +42,7 @@ passport.use(
 
 2. JWTs
 
-```
+```ts
 const createAuthTokens = (
   user: DbUser
 ): { refreshToken: string; accessToken: string } => {
@@ -68,7 +68,7 @@ const createAuthTokens = (
 
 3. Cookies
 
-```
+```ts
 // __prod__ is a boolean that is true when the NODE_ENV is "production"
 const cookieOpts = {
   httpOnly: true,
@@ -88,7 +88,7 @@ export const sendAuthCookies = (res: Response, user: DbUser) => {
 
 ### How to deploy server to VPS
 
-Get a VPS if you don't already have one: (Hostinger)[https://hostinger.com/benawad] use code BENAWAD at checkout for additional savings (SPONSORED)
+Get a VPS like [Hostinger](https://hostinger.com/benawad) if you don't already have one. Use code `BENAWAD` at checkout for additional savings (SPONSORED)
 
 0. Save yourself some hassle and setup passwordless ssh into your VPS: https://www.hostinger.com/tutorials/how-to-setup-passwordless-ssh/
 1. Install Dokku on your VPS https://dokku.com/docs/getting-started/installation/ (I like to use this for zero-downtime deployments)
@@ -116,7 +116,7 @@ https://www.hostinger.com/tutorials/vps-security
 
 ### Frontend deployment
 
-I like to use (Cloudflare pages)[https://pages.cloudflare.com/]
+I like to use [Cloudflare pages](https://pages.cloudflare.com/)
 
 ### Debugging cookies
 
