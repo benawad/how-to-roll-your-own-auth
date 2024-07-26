@@ -101,7 +101,10 @@ Get a VPS like [Hostinger](https://hostinger.com/benawad) if you don't already h
 7. Tag image in your VPS `docker tag example/auth:1 dokku/api:latest`
 8. Deploy `dokku deploy api latest`
    - This will fail
-9. Set environment variables `dokku config:set api FRONTEND_URL=https://example.com ACCESS_TOKEN_SECRET=hj890duj01jd9012j0dj9021390132 REFRESH_TOKEN_SECRET=q90wej9201je091212903291308 DISCORD_SECRET_ID=asdj902j1d0921 DISCORD_CLIENT_ID=129032180312 DOMAIN=example.com`
+9. Set environment variables
+    ```bash
+   dokku config:set api FRONTEND_URL=https://example.com ACCESS_TOKEN_SECRET=hj890duj01jd9012j0dj9021390132 REFRESH_TOKEN_SECRET=q90wej9201je091212903291308 DISCORD_SECRET_ID=asdj902j1d0921 DISCORD_CLIENT_ID=129032180312 DOMAIN=example.com
+    ```
    - This should redeploy the app and it should work
 
 ### Custom domain
