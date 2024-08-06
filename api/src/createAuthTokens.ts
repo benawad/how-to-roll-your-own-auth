@@ -100,11 +100,7 @@ export const checkTokens = async (
   if (!user || user.refreshTokenVersion !== data.refreshTokenVersion) {
     throw new TRPCError({ code: "UNAUTHORIZED" });
   }
-
-  await db.update(usersTable).set({
-    refreshTokenVersion: sql`${usersTable.refreshTokenVersion} + 1`,
-  });
-
+  
   return {
     userId: data.userId,
     user,
